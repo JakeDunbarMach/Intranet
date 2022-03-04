@@ -51,12 +51,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\SystemEmployeePermission.cs" />
-    <Compile Include="Admin\SystemPermissions.cs" />
-    <Compile Include="Admin\SystemSection.cs" />
-    <Compile Include="Admin\EmployeePermission.cs" />
-    <Compile Include="Admin\EmployeeUser.cs" />
-    <Compile Include="Admin\SystemSite.cs" />
     <Compile Include="UploadFileResult.cs" />
     <Compile Include="Constants\Validation.cs" />
     <Compile Include="Constants\SectionEnum.cs" />

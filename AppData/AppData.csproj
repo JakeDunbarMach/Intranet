@@ -54,20 +54,8 @@
   <ItemGroup>
     <Compile Include="BaseClasses\MapperClassBase.cs" />
     <Compile Include="BaseClasses\DataClassBase.cs" />
-    <Compile Include="EntityDocument.cs" />
-    <Compile Include="EntitySearchResult.cs" />
     <Compile Include="GenericList.cs" />
-    <Compile Include="Mappers\SystemPermission.cs" />
     <Compile Include="Mappers\GenericList.cs" />
-    <Compile Include="Mappers\EntitySearchResult.cs" />
-    <Compile Include="Mappers\EntityDocument.cs" />
-    <Compile Include="Mappers\Entity.cs" />
-    <Compile Include="Entity.cs" />
-    <Compile Include="SystemPermission.cs" />
-    <Compile Include="Mappers\SystemEmployeePermission.cs" />
-    <Compile Include="SystemEmployeePermission.cs" />
-    <Compile Include="Mappers\EmployeeUser.cs" />
-    <Compile Include="EmployeeUser.cs" />
     <Compile Include="ErrorLog.cs" />
     <Compile Include="Constants\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
