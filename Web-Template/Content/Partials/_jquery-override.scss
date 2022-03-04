@@ -1,0 +1,23 @@
+﻿.ui-dialog {
+    z-index: 1050 !important;
+
+    .ui-dialog-buttonpane button {
+        padding: 2px 5px;
+        margin: 10px 2px;
+    }
+}
+
+.ui-autocomplete {
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#ui-datepicker-div {
+    /*So calendar appears on top of pagedList*/
+    z-index: 1055 !important;
+}
+
+.ui-button-icon-only {
+    text-indent: -9999px;
+}

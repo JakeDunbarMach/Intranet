@@ -1,0 +1,42 @@
+﻿
+.multiselect-container {
+    overflow-y: scroll;
+    max-height: 400px;
+    min-width: 100%;
+
+    input {
+        width: auto !important;
+    }
+
+    > .active > a,
+    > .active > a:hover,
+    > .active > a:focus {
+        background-color: $light-grey;
+    }
+}
+
+.multiselectSearchRow {
+    margin-right: 30px;
+    margin-bottom: 10px !important;
+    background-image: url("Images/downArrow.PNG");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 15px;
+    background-position-x: 98%;
+
+    span:hover {
+        cursor: default;
+    }
+}
+
+.multiselect-selected-text {
+    color: $dark-grey;
+}
+
+.multiselect-clear-filter {
+    display: none;
+}
+
+.multiselect.dropdown-toggle::after {
+    display: none;
+}

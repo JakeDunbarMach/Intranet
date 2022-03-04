@@ -1,0 +1,29 @@
+﻿@using System.Web.Mvc
+@model bool
+<div data-ui="buttonset" class="toggle-radio IsActiveTemplate">
+    @{
+        Dictionary<string, object> yesAttrs = new Dictionary<string, object>();
+        Dictionary<string, object> noAttrs = new Dictionary<string, object>();
+
+        yesAttrs.Add("id", ViewData.TemplateInfo.GetFullHtmlFieldId("") + "Yes");
+        noAttrs.Add("id", ViewData.TemplateInfo.GetFullHtmlFieldId("") + "No");
+
+        if (Model == true)
+        {
+            yesAttrs.Add("checked", "checked");
+        }
+        else
+        {
+            noAttrs.Add("checked", "checked");
+        }
+    }
+
+    @Html.RadioButtonFor(x => x, "true", yesAttrs)
+    @Html.RadioButtonFor(x => x, "false", noAttrs)
+    <div class="switch">
+        <label for="@(ViewData.TemplateInfo.GetFullHtmlFieldId(""))Yes">Active</label>
+        <label for="@(ViewData.TemplateInfo.GetFullHtmlFieldId(""))No">Inactive</label>
+        <span></span>
+    </div>
+</div>
+

@@ -1,0 +1,73 @@
+﻿.homeIcons {
+    width: 70%;
+    margin: 40px auto 20px auto !important;
+    text-align: center;
+
+    img {
+        margin: 10px;
+    }
+}
+
+.DDTileOrange, .DDTileGreen, .DDTileGrey, .DDTileLBlue, .DDTileRed, .DDTileDBlue, .DDTilePurple, .DDTilePink {
+    height: 200px;
+    width: 200px;
+    color: $white;
+    display: inline-block;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-position: 50% 35%;
+    background-size: 80px, cover;
+    vertical-align: middle;
+    position: relative;
+}
+
+.DDTileOrange {
+    background: linear-gradient($orange, $orange-d);
+}
+
+.DDTileGreen {
+    background: linear-gradient($green, $green-d);
+}
+
+.DDTileGrey {
+    background: linear-gradient($grey, $dark-grey);
+}
+
+.DDTileLBlue {
+    background: linear-gradient($blue, $blue-d);
+}
+
+.DDTileDBlue {
+    background: linear-gradient($dark-blue, $dark-blue-d);
+}
+
+.DDTilePurple {
+    background: linear-gradient($purple, #5a378f);
+}
+
+.DDTilePink {
+    background: linear-gradient($pink, #a2124e);
+}
+
+.homeIconFA {
+    position: relative;
+    top: 35px;
+    color: $white;
+}
+
+.DDTileTxt0 {
+    height: 50px;
+    line-height: 50px;
+}
+
+.DDTileTxt1 {
+    position: relative;
+    top: 45px;
+    font-size: 16px;
+    font-weight: 700;
+    color: $white;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}

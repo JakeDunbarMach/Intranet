@@ -1,0 +1,750 @@
+﻿@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+.multiselect-container {
+    overflow-y: scroll;
+    max-height: 400px;
+    min-width: 100%;
+}
+
+    .multiselect-container input {
+        width: auto !important;
+    }
+
+    .multiselect-container > .active > a,
+    .multiselect-container > .active > a:hover,
+    .multiselect-container > .active > a:focus {
+        background-color: #d3d3d3;
+    }
+
+.multiselectSearchRow {
+    margin-right: 30px;
+    margin-bottom: 10px !important;
+    background-image: url("Images/downArrow.PNG");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 15px;
+    background-position-x: 98%;
+}
+
+    .multiselectSearchRow span:hover {
+        cursor: default;
+    }
+
+.multiselect-selected-text {
+    color: #555;
+}
+
+.multiselect-clear-filter {
+    display: none;
+}
+
+.multiselect.dropdown-toggle::after {
+    display: none;
+}
+
+.tab-pane {
+    border: 1px solid #d3d3d3;
+    border-top: 0;
+    padding: 15px;
+}
+
+    .tab-pane .table,
+    .tab-pane .pagedList,
+    .tab-pane .utilitySearchRow,
+    .tab-pane .filters {
+        width: 99%;
+    }
+
+.activeTab {
+    background-color: rgba(0, 137, 132, 0.7) !important;
+}
+
+textarea {
+    min-height: 65px;
+}
+
+.panel {
+    padding: 0;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists will truncate terms that are too long to fit in the left column */
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.caret {
+    color: #ffffff !important;
+}
+
+.col-form-label {
+    font-weight: 700;
+}
+
+#file {
+    width: 100% !important;
+}
+
+.fileinput-button {
+    position: relative;
+    overflow: hidden;
+}
+
+    .fileinput-button input {
+        position: absolute;
+        margin-bottom: 2px;
+        top: 0;
+        right: 0;
+        margin: 0;
+        opacity: 0;
+        font-size: 20px;
+        direction: ltr;
+        cursor: pointer;
+    }
+
+.file-upload-error td {
+    color: #ff0000 !important;
+}
+
+.progress {
+    clear: both;
+    height: inherit;
+    padding: 2px 2px 2px 2px;
+    border: 1px solid #e3f2f2;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+    .progress .progresstext {
+        font-size: small;
+        padding-top: 5px;
+    }
+
+    .progress .progressbar,
+    .progress .progresstext {
+        text-align: center;
+    }
+
+    .progress #progress_bar {
+        width: 228px;
+        background-color: transparent;
+        height: 11px;
+    }
+
+.disabled {
+    background-color: #f2f2f2;
+}
+
+.form-control:not([class*=" form-control-"]) {
+    height: 2.4rem;
+}
+
+.btnfilters {
+    margin-top: 35px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.btnAdd {
+    max-width: 300px;
+    padding: 5px 2px 15px 2px;
+    background: none !important;
+    border: none;
+    padding: 5px 0 !important;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    width: 165px;
+    height: 40px;
+    text-align: center;
+    background: #54B948;
+    transition: all 0.2s ease;
+    border-radius: 25px;
+}
+
+    .switch span {
+        position: relative;
+        width: 20px;
+        height: 4px;
+        top: 50%;
+        left: 50%;
+        margin: -2px 0px 0px -4px;
+        background: #ffffff;
+        display: block;
+        transform: rotate(-45deg);
+        transition: all 0.2s ease;
+    }
+
+        .switch span:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 4px;
+            height: 12px;
+            margin-top: -8px;
+            background: #ffffff;
+            transition: all 0.2s ease;
+        }
+
+.toggle-radio {
+    display: inline-block;
+    float: right;
+}
+
+    .toggle-radio input[type=radio] {
+        display: none;
+    }
+
+/* For use with UIhint YesNoBoolActive */
+.IsActiveTemplate label {
+    cursor: pointer;
+    color: #d3d3d3;
+    width: 60px;
+    line-height: 40px;
+    transition: all 0.2s ease;
+}
+
+    .IsActiveTemplate label[for=IsActiveYes] {
+        position: absolute;
+        left: 3px;
+        height: 20px;
+    }
+
+    .IsActiveTemplate label[for=IsActiveNo] {
+        position: absolute;
+        right: 3px;
+    }
+
+.IsActiveTemplate #IsActiveYes:checked ~ .switch label[for=IsActiveYes] {
+    color: #ffffff;
+}
+
+.IsActiveTemplate #IsActiveNo:checked ~ .switch {
+    background: #ff0000;
+}
+
+    .IsActiveTemplate #IsActiveNo:checked ~ .switch span {
+        background: #ffffff;
+        margin-left: -8px;
+    }
+
+        .IsActiveTemplate #IsActiveNo:checked ~ .switch span:after {
+            background: #ffffff;
+            height: 20px;
+            margin-top: -8px;
+            margin-left: 8px;
+        }
+
+    .IsActiveTemplate #IsActiveNo:checked ~ .switch label[for=IsActiveNo] {
+        color: #ffffff;
+    }
+
+.btn-primary {
+    background-color: #13B5EA;
+    border-color: #13B5EA;
+}
+
+    .btn-primary:hover {
+        background-color: #0f91bb;
+        border-color: #0f91bb;
+    }
+
+.btn-link {
+    padding: 0;
+}
+
+input[type='checkbox'] {
+    text-align: left !important;
+}
+
+.field-validation-error p, .field-validation-error span {
+    color: #ff0000 !important;
+}
+
+.form-group.required .col-form-label:after {
+    content: "*" !important;
+    padding-left: 5px;
+    color: #ff0000;
+}
+
+.ValidationError, #ValidationError {
+    margin: 10px;
+    color: #ff0000 !important;
+}
+
+.checkBoxField {
+    -webkit-column-count: 3;
+    /* Chrome, Safari, Opera */
+    -moz-column-count: 3;
+    /* Firefox */
+    column-count: 3;
+    width: 100%;
+}
+
+.checkBoxItem {
+    display: inline-block;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.userListbox {
+    height: auto !important;
+}
+
+.homeIcons {
+    width: 70%;
+    margin: 40px auto 20px auto !important;
+    text-align: center;
+}
+
+    .homeIcons img {
+        margin: 10px;
+    }
+
+.DDTileOrange, .DDTileGreen, .DDTileGrey, .DDTileLBlue, .DDTileRed, .DDTileDBlue, .DDTilePurple, .DDTilePink {
+    height: 200px;
+    width: 200px;
+    color: #ffffff;
+    display: inline-block;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-position: 50% 35%;
+    background-size: 80px, cover;
+    vertical-align: middle;
+    position: relative;
+}
+
+.DDTileOrange {
+    background: linear-gradient(#F08B00, #bd6d00);
+}
+
+.DDTileGreen {
+    background: linear-gradient(#54B948, #439539);
+}
+
+.DDTileGrey {
+    background: linear-gradient(#666666, #555);
+}
+
+.DDTileLBlue {
+    background: linear-gradient(#13B5EA, #0f91bb);
+}
+
+.DDTileDBlue {
+    background: linear-gradient(#1C2674, #12194b);
+}
+
+.DDTilePurple {
+    background: linear-gradient(#5f13bd, #5a378f);
+}
+
+.DDTilePink {
+    background: linear-gradient(#ed2b5f, #a2124e);
+}
+
+.homeIconFA {
+    position: relative;
+    top: 35px;
+    color: #ffffff;
+}
+
+.DDTileTxt0 {
+    height: 50px;
+    line-height: 50px;
+}
+
+.DDTileTxt1 {
+    position: relative;
+    top: 45px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.ui-dialog {
+    z-index: 1050 !important;
+}
+
+    .ui-dialog .ui-dialog-buttonpane button {
+        padding: 2px 5px;
+        margin: 10px 2px;
+    }
+
+.ui-autocomplete {
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#ui-datepicker-div {
+    /*So calendar appears on top of pagedList*/
+    z-index: 1055 !important;
+}
+
+.ui-button-icon-only {
+    text-indent: -9999px;
+}
+
+* {
+    font-size: 15px;
+    font-family: 'Roboto',Tahoma, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Rockwell, Tahoma, Arial;
+}
+
+.body-content {
+    padding: 15px;
+}
+
+.clear {
+    clear: both;
+}
+
+a:link, a:hover {
+    color: #000;
+    text-decoration: none;
+}
+
+a:visited, a:active {
+    color: #000;
+}
+
+.TextOrangeMach {
+    color: #008984 !important;
+}
+
+.BGOrangeMach {
+    background-color: #008984 !important;
+}
+
+.TextLBlueMach {
+    color: #13B5EA !important;
+}
+
+.BGLBlueMach {
+    background-color: #13B5EA !important;
+}
+
+.TextDBlueMach {
+    color: #1C2674 !important;
+}
+
+.BGDBlue2Mach {
+    background-color: #1C2674 !important;
+}
+
+.TextGreenMach {
+    color: #54B948 !important;
+}
+
+.BGGreenMach {
+    background-color: #54B948 !important;
+}
+
+.TextGreyMach {
+    color: #666666 !important;
+}
+
+.BGGreyMach {
+    background-color: #666666 !important;
+}
+
+.TextRedMach {
+    color: #ff0000 !important;
+}
+
+.BGRedMach {
+    background-color: #ff0000 !important;
+}
+
+.TextBlackMach {
+    color: #000 !important;
+}
+
+#header-bar {
+    position: relative;
+    min-height: 75px;
+    background-color: #d0d42c;
+    border-color: #d0d42c;
+}
+
+#logo {
+    background-image: url("Images/MachLogo.png");
+    background-repeat: no-repeat;
+    background-size: 71px;
+    float: right;
+    height: 70px;
+    margin: 10px 10px 10px 10px;
+    display: table;
+}
+
+    #logo > h1 {
+        margin: 10px 10px 10px 135px;
+        color: #ffffff;
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 135px;
+    }
+
+@media (max-width: 762px) {
+    #logo {
+        background-size: 70px !important;
+        height: 40px;
+    }
+
+        #logo > h1 {
+            margin: 0 !important;
+            padding-left: 85px;
+            display: inherit;
+        }
+}
+
+.navbar-nav {
+    color: #f2f2f2 !important;
+}
+
+    .navbar-nav .nav-link {
+        color: #ffffff !important;
+    }
+
+    .navbar-nav a, .navbar-nav a:hover, .navbar-nav a:active {
+        text-decoration: none;
+    }
+
+    .navbar-nav li .cur_lnk {
+        color: #13b5ea !important;
+    }
+
+.nav-item > .active {
+    background-color: #d3d3d3 !important;
+}
+
+.dropdown-menu > li > a {
+    width: 100%;
+}
+
+.signOutBtn {
+    color: #ffffff;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: small;
+    border-bottom: 1px solid rgba(19, 181, 234, 0.9);
+    border-left: 1px solid rgba(19, 181, 234, 0.9);
+    background-color: rgba(19, 181, 234, 0.5);
+}
+
+    .signOutBtn a {
+        text-decoration: none !important;
+    }
+
+.signOutBtnText {
+    color: #ffffff;
+    font-size: small;
+}
+
+.PagedList-ellipses {
+    display: none !important;
+}
+
+/*Spinner style for loading screens*/
+#spinner {
+    display: none;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-image: url("Images/loading.png");
+    background-size: 100px;
+    -webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    text-align: center;
+    padding: 10px;
+    margin-left: -50px;
+    margin-top: -50px;
+    z-index: 2;
+    overflow: auto;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.multi-line {
+    height: 100px !important;
+    resize: none;
+    /*Turn off chrome multi-line resize control*/
+}
+
+.select2-container--default .select2-selection--single {
+    border: 1px solid #d3d3d3;
+}
+
+    .select2-container--default .select2-selection--single .select2-selection__arrow {
+        height: 32px !important;
+    }
+
+.select2-selection__rendered {
+    padding-left: 4px !important;
+    line-height: unset !important;
+    color: #fff !important;
+}
+
+.table, .pagedList, .utilitySearchRow, .filters {
+    margin: 2px auto auto auto;
+}
+
+    .table thead th:not(.row-header) {
+        border-left: 1px solid #008984;
+    }
+
+    .table tbody {
+        border: 1px solid #d3d3d3;
+    }
+
+    .table .thead-light th {
+        background-color: #008984;
+        border-top: 1px solid #006879 !important;
+        border-bottom: 2px solid #006879 !important;
+        white-space: nowrap;
+    }
+
+        .table .thead-light th:first-child {
+            border-left: 1px solid #006879 !important;
+        }
+
+        .table .thead-light th:last-child {
+            border-right: 1px solid #006879 !important;
+        }
+
+    .table tr {
+        padding: 0.50rem;
+    }
+
+    .table th {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+        .table th.row-icon {
+            width: 40px;
+        }
+
+    .table td {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-left: 1px solid #f2f2f2;
+    }
+
+        .table td:first-child {
+            border-left: 1px solid #d3d3d3;
+        }
+
+        .table td:last-child {
+            border-right: 1px solid #d3d3d3;
+        }
+
+        .table td.row-icon {
+            display: flex;
+            justify-content: space-between;
+        }
+
+.td-center {
+    text-align: center;
+}
+
+.utilitySearchRow {
+    margin-bottom: 0;
+}
+
+.ExportButton, .AuditButton {
+    float: right;
+    margin-left: 20px;
+    color: #000;
+}
+
+.orderby {
+    padding-right: 12px !important;
+    cursor: pointer;
+}
+
+.ordernone {
+    background: url(images/sort.gif) right 5px center;
+}
+
+.orderasc {
+    background: url(images/sort_asc.gif) right 5px center;
+}
+
+.orderdesc {
+    background: url(images/sort_desc.gif) right 5px center;
+}
+
+.ordernone, .orderasc, .orderdesc {
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+.borderright {
+    border-right: solid 1px #ffffff;
+}
+
+.activeRowFalse td {
+    background-color: #f2f2f2;
+    color: #d3d3d3;
+    text-decoration: line-through;
+}
+
+/* Data Tables */
+table.dataTable thead th, table.dataTable thead td {
+    border-bottom: none !important;
+}
+
+table.dataTable.no-footer {
+    border-bottom: 1px solid #d3d3d3 !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background: #13B5EA !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: #f2f2f2 !important;
+    color: #000 !important;
+    border: none !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.next, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+    background: none !important;
+}

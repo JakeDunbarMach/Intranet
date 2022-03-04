@@ -1,0 +1,24 @@
+﻿@using System.Web.Mvc
+@model bool
+<div data-ui="buttonset">
+    @{
+        Dictionary<string, object> yesAttrs = new Dictionary<string, object>();
+        Dictionary<string, object> noAttrs = new Dictionary<string, object>();
+
+        yesAttrs.Add("id", ViewData.TemplateInfo.GetFullHtmlFieldId("") + "Yes");
+        noAttrs.Add("id", ViewData.TemplateInfo.GetFullHtmlFieldId("") + "No");
+
+        if (Model == true)
+        {
+            yesAttrs.Add("checked", "checked");
+        }
+        else
+        {
+            noAttrs.Add("checked", "checked");
+        }
+    }
+
+    @Html.RadioButtonFor(x => x, "true", yesAttrs) <label for="@(ViewData.TemplateInfo.GetFullHtmlFieldId(""))Yes">Yes</label>
+    @Html.RadioButtonFor(x => x, "false", noAttrs) <label for="@(ViewData.TemplateInfo.GetFullHtmlFieldId(""))No">No</label>
+</div>
+

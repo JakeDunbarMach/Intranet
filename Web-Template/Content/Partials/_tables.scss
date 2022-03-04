@@ -1,0 +1,149 @@
+﻿.table, .pagedList, .utilitySearchRow, .filters {
+    margin: 2px auto auto auto;
+}
+
+.table {
+    thead th:not(.row-header) {
+        border-left: 1px solid $table-blue;
+    }
+
+    tbody {
+        border: 1px solid $light-grey;
+    }
+
+    .thead-light {
+        th {
+            background-color: $table-blue;
+            border-top: 1px solid $table-mid-blue !important;
+            border-bottom: 2px solid $table-mid-blue !important;
+            white-space: nowrap;
+        }
+
+        th:first-child {
+            border-left: 1px solid $table-mid-blue !important;
+        }
+
+        th:last-child {
+            border-right: 1px solid $table-mid-blue !important;
+        }
+    }
+
+    tr {
+        padding: 0.50rem;
+    }
+
+    th {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    th.row-icon {
+        width: 40px;
+    }
+
+    td {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-left: 1px solid $v-light-grey;
+
+        &:first-child {
+            border-left: 1px solid $light-grey;
+        }
+
+        &:last-child {
+            border-right: 1px solid $light-grey;
+        }
+    }
+
+    td.row-icon {
+        padding: 0;
+
+        .icon-i {
+            width: 100%;
+            height: 38px;
+            text-align: center;
+        }
+
+        i {
+            padding: 10px 0;
+            display: none;
+        }
+    }
+}
+
+.td-center {
+    text-align: center;
+}
+
+.utilitySearchRow {
+    margin-bottom: 0;
+}
+
+.ExportButton, .AuditButton {
+    float: right;
+    margin-left: 20px;
+    color: $black;
+}
+
+.orderby {
+    padding-right: 12px !important;
+    cursor: pointer;
+}
+
+.ordernone {
+    background: url(images/sort.gif) right 5px center;
+}
+
+.orderasc {
+    background: url(images/sort_asc.gif) right 5px center;
+}
+
+.orderdesc {
+    background: url(images/sort_desc.gif) right 5px center;
+}
+
+.ordernone, .orderasc, .orderdesc {
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+.borderright {
+    border-right: solid 1px $white;
+}
+
+.activeRowFalse td {
+    background-color: $v-light-grey;
+    color: $light-grey;
+    text-decoration: line-through;
+}
+
+
+
+/* Data Tables */
+table.dataTable {
+    thead th, thead td {
+        border-bottom: none !important;
+    }
+
+    &.no-footer {
+        border-bottom: 1px solid $light-grey !important;
+    }
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    .paginate_button.current, .paginate_button.current:hover {
+        background: $blue !important;
+        color: $white !important;
+        border: none !important;
+    }
+
+    .paginate_button:hover {
+        background: $v-light-grey !important;
+        color: $black !important;
+        border: none !important;
+    }
+
+    .paginate_button.next, .paginate_button.disabled, .paginate_button.disabled:hover, .paginate_button.disabled:active {
+        background: none !important;
+    }
+}

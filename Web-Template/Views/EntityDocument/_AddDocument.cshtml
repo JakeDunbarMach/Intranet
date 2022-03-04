@@ -1,0 +1,50 @@
+﻿@model AppModel.EntityDocument
+
+@using (Html.BeginForm("UploadFile", "EntityDocument", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div id="lstDocument">
+        <div class="bold">Select documents to upload</div>
+        <br />
+        <table id="tblDocument" class="table table-hover small">
+            <tbody>
+                <tr>
+                    <th style="width:280px">
+                        Document
+                    </th>
+                    <th style="width:130px">
+                        Size
+                    </th>
+                    <th>
+                        Uploaded
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>&nbsp;</div>
+
+    <div id="uploadContainer">
+        @Html.HiddenFor(model => model.EntityID)
+        <div class="col-sm-12">
+            <div style="float:left;padding-top:3px">
+                <span class="tn btn-default fileinput-button">
+                    <input id="fileupload" name="fileupload" type="file" multiple="multiple" />
+                    <button class="btn btn-link" id="btnAddFiles"><i class="fas fa-plus btn-link"></i> Add files...</button>
+                </span>
+            </div>
+            <br />
+            <div class="progress" style="width:730px;height:26px;border:1px solid #f6ecec">
+                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                    <span id="progreestext" style="width:730px;text-align:center;"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-12" style="margin-top:5px;">
+    </div>
+}
+
+<script src="~/Scripts/EntityDocument/AddDocument.js?id=@ViewBag.JavaScriptVersion"></script>
+

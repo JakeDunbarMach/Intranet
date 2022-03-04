@@ -1,0 +1,991 @@
+﻿/* Content  - Last updated 2018-04-10 by Sian */
+
+/* 0) Relates to this project */
+/* 1) Overall layout */
+/* 2a) Form layout || b) Form buttons || c) Form validation */
+/* 3) Documents */
+/* 4a) User section || b) User site section */
+/* 5a) JQuery overrides || b) Bootstrap overrides || c) Bootstrap Multi-select dropdowns || d) Select2 overrides*/
+/* 6) 2SFG Colours */
+/* 7a) Anchors/Links || b) Navigation || c) Home View */
+/* 8a) Table settings || b) Table ordering */
+/* 9a) Search layout || b) Search addons || c) Search Filters & Search Results*/
+
+
+
+
+
+
+
+/* 0)_________START - Relates only to this Project_________ */
+
+/* _________END - Relates only to this Project_________ */
+
+
+
+
+
+
+
+
+/* 1)_________START - Overall layout_________ */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    font-size: 15px;
+    font-family: 'Roboto',Tahoma, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Rockwell, Tahoma, Arial;
+}
+
+.body-content {
+    padding: 15px;
+}
+
+.clear {
+    clear: both;
+}
+/* _________END - Overall layout_________ */
+
+
+
+
+
+
+
+/* 2a)_________START - Form layout_________ */
+.disabled {
+    background-color: #F2F2F2;
+}
+
+.text-label {
+    color: #cdcdcd;
+    font-weight: bold;
+}
+
+.td-center {
+    text-align: center;
+}
+
+/*#ref {
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px;
+}*/
+
+th.row-icon {
+    width: 40px;
+}
+
+td.row-icon {
+    /*width: 50px;*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-icon2 {
+    width: 50px;
+}
+
+.activeRowFalse td {
+    background-color: WhiteSmoke;
+    color: lightgray;
+    text-decoration: line-through;
+}
+
+/* _________END - Form layout_________ */
+
+
+
+
+
+
+/* 2b)_________START - Form buttons_________ */
+.btnfilters {
+    margin-top: 35px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.export-td {
+    text-align: right;
+    background-color: #fff;
+    padding: 0px !important;
+    vertical-align: middle !important;
+}
+
+.searchBtn {
+    margin: 3px 2px !important;
+    cursor: pointer;
+    -webkit-appearance: button !important;
+    width: 100px;
+    height: 30px;
+    background-color: rgba(239, 239, 239, 1);
+}
+
+.btnAdd {
+    max-width: 300px;
+    padding: 5px 2px 15px 2px;
+}
+
+input.btnAdd {
+    background: none !important;
+    border: none;
+    padding: 5px 0 !important;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    width: 165px;
+    height: 40px;
+    text-align: center;
+    background: #00bc9c;
+    transition: all 0.2s ease;
+    border-radius: 25px;
+}
+
+    .switch span {
+        position: relative;
+        width: 20px;
+        height: 4px;
+        top: 50%;
+        left: 50%;
+        margin: -2px 0px 0px -4px;
+        background: #fff;
+        display: block;
+        transform: rotate(-45deg);
+        transition: all 0.2s ease;
+    }
+
+        .switch span:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 4px;
+            height: 12px;
+            margin-top: -8px;
+            background: #fff;
+            transition: all 0.2s ease;
+        }
+
+.toggle-radio {
+    display: inline-block;
+    float: right;
+}
+
+    .toggle-radio input[type=radio] {
+        display: none;
+    }
+
+/* For use with UIhint YesNoBoolActive */
+.switch label {
+    cursor: pointer;
+    color: rgba(0,0,0,0.2);
+    width: 60px;
+    line-height: 40px;
+    transition: all 0.2s ease;
+}
+
+label[for=IsActiveYes] {
+    position: absolute;
+    left: 3px;
+    height: 20px;
+}
+
+label[for=IsActiveNo] {
+    position: absolute;
+    right: 3px;
+}
+
+#IsActiveNo:checked ~ .switch {
+    background: #eb4f37;
+}
+
+    #IsActiveNo:checked ~ .switch span {
+        background: #fff;
+        margin-left: -8px;
+    }
+
+        #IsActiveNo:checked ~ .switch span:after {
+            background: #fff;
+            height: 20px;
+            margin-top: -8px;
+            margin-left: 8px;
+        }
+
+#IsActiveYes:checked ~ .switch label[for=IsActiveYes] {
+    color: #fff;
+}
+
+#IsActiveNo:checked ~ .switch label[for=IsActiveNo] {
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: rgba(19,181,234,1);
+    border-color: rgba(19,181,234,1);
+}
+
+    .btn-primary:hover {
+        background-color: #11a3d2;
+        border-color: #11a3d2;
+    }
+
+.btn-link {
+    padding: 0;
+}
+
+
+/* _________END - Form buttons_________ */
+/* 2c)_________START - Form validation_________ */
+.field-validation-error, .field-validation-error p, .field-validation-error span {
+    color: red !important;
+}
+
+.form-group.required .col-form-label:after {
+    content: "*" !important;
+    padding-left: 5px;
+    color: red;
+}
+
+
+.ValidationError, #ValidationError {
+    margin: 10px;
+    color: red !important;
+}
+/* _________END - Form validation_________ */
+
+
+
+
+
+
+
+/* 3)_________START - Documents - form_________ */
+#file {
+    width: 100% !important;
+}
+/* _________END - Documents - form_________ */
+
+
+
+
+
+
+
+/* 4a)_________START - User section_________ */
+
+
+/* _________END - User section_________ */
+
+
+
+
+
+
+
+/* 4b)_________START - User Site section_________ */
+#checkBoxField {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    width: 100%;
+}
+
+.checkBoxItem {
+    display: inline-block;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+/* _________END - User Site section_________ */
+/* 5a)_________START - jQuery Overrides_________*/
+.ui-dialog {
+    z-index: 1050 !important;
+}
+
+    .ui-dialog .ui-dialog-buttonpane button {
+        padding: 2px 5px;
+        margin: 10px 2px;
+    }
+
+.ui-autocomplete {
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#ui-datepicker-div {
+    /*So calendar appears on top of pagedList*/
+    z-index: 1055 !important;
+}
+
+.ui-button-icon-only {
+    text-indent: -9999px;
+}
+/*_________END - jQuery Overrides_________*/
+
+
+
+
+
+
+
+/* 5b)_________START - Bootstrap Overrides_________*/
+
+input[type='checkbox'] {
+    text-align: left !important;
+}
+
+/*.btn {
+    border: 1px solid #a9a9a9 !important;
+    padding: 3px 12px;
+    margin: 10px 2px;
+}*/
+
+.tab-pane {
+    border: 1px solid #dee2e6;
+    border-top: 0;
+    padding: 15px;
+}
+
+.nav-item > .active {
+    background-color: #dee2e6 !important;
+}
+
+.dropdown-menu > li > a {
+    width: 100%;
+}
+
+.activeTab {
+    background-color: rgba(240,139,0, 0.7) !important;
+}
+
+textarea {
+    min-height: 65px;
+}
+
+.panel {
+    padding: 0;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column */
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.caret {
+    color: white !important;
+}
+
+.col-form-label {
+    font-weight: 700;
+}
+
+
+
+
+/*_________END - Bootstrap Overrides_________*/
+/* 5c)_________START - Bootstrap Multi-select dropdowns_________*/
+.multiselect-container input {
+    width: auto !important;
+}
+
+.multiselect-container > .active > a, .multiselect-container > .active > a:hover, .multiselect-container > .active > a:focus {
+    background-color: lightgray;
+}
+
+.multiselect-container {
+    overflow-y: scroll;
+    max-height: 400px;
+}
+
+.multiselect-selected-text {
+    color: #555;
+}
+
+.multiselectSearchRow {
+    padding: 3px 2px 3px 5px;
+    margin-right: 30px;
+    margin-bottom: 10px !important;
+    background-image: url("Images/downArrow.PNG");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 15px;
+    background-position-x: 98%;
+}
+
+    .multiselectSearchRow span {
+        font-family: Verdana, Arial, sans-serif;
+        color: #555;
+        display: block;
+    }
+
+        .multiselectSearchRow span:hover {
+            cursor: default;
+        }
+
+.multiselect-clear-filter {
+    display: none;
+}
+
+.multiselect.dropdown-toggle::after {
+    display: none;
+}
+
+
+/*_________END - Bootstrap Multi-select dropdowns_________*/
+
+
+/* 5d)_________START - Select2 overrides_________*/
+
+.select2-container--default .select2-selection--single {
+    border: 1px solid #ced4da;
+}
+
+/*_________END - Select2 dropdowns_________*/
+
+
+/* 6)_________START - 2SFG Colours_________*/
+.TextOrange2SFG {
+    color: rgba(240,139,0,1) !important;
+}
+
+.BGOrange2SFG {
+    background-color: rgba(240,139,0,1) !important;
+}
+
+.TextLBlue2SFG {
+    color: rgba(19,181,234,1) !important;
+}
+
+.BGLBlue2SFG {
+    background-color: rgba(19,181,234,1) !important;
+}
+
+.TextDBlue2SFG {
+    color: rgba(28,38,116,1) !important;
+}
+
+.BGDBlue22SFG {
+    background-color: rgba(28,38,116,1) !important;
+}
+
+.TextGreen2SFG {
+    color: rgba(84,185,72,1) !important;
+}
+
+.BGGreen2SFG {
+    background-color: rgba(84,185,72,1) !important;
+}
+
+.TextGrey2SFG {
+    color: rgba(128,128,128,1) !important;
+}
+
+.BGGrey2SFG {
+    background-color: rgba(128,128,128,1) !important;
+}
+
+.TextRed2SFG {
+    color: rgba(234,72,19,1) !important;
+}
+
+.BGRed2SFG {
+    background-color: rgba(234,72,19,1) !important;
+}
+
+.TextBlack2SFG {
+    color: rgba(0,0,0,1) !important;
+}
+/*_________END - 2SFG Colours_________*/
+
+
+
+
+
+
+
+
+/* 7a)_________START - Anchors/Links_________*/
+a:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+
+a:visited {
+    color: #000000;
+}
+
+
+a:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+
+a:active {
+    color: #000000;
+}
+/*_________END Anchors/Links_________*/
+
+
+
+
+
+
+
+/* 7b)_________START - Navigation Bar_________*/
+#header-bar {
+    position: relative;
+    min-height: 75px;
+    background-color: rgb(24,110,175);
+    border-color: rgb(24,110,175);
+}
+
+#logo {
+    background-image: url('Images/2SFG-White-Logo-2016.png');
+    background-repeat: no-repeat;
+    background-size: 120px;
+    float: left;
+    height: 61px;
+    margin: 10px 10px 10px 10px;
+    display: table;
+}
+
+    #logo > h1 {
+        margin: 10px 10px 10px 135px;
+        color: white;
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 135px;
+    }
+
+@media (max-width: 762px ) {
+    #logo {
+        background-size: 70px !important;
+        height: 40px;
+    }
+
+        #logo > h1 {
+            margin: 0 !important;
+            padding-left: 85px;
+            display: inherit;
+        }
+}
+
+.navbar-nav {
+    color: #fafafa !important;
+}
+
+    .navbar-nav .nav-link {
+        color: white !important;
+    }
+
+    .navbar-nav a, .navbar-nav a:hover, .navbar-nav a:active {
+        text-decoration: none;
+    }
+
+
+    .navbar-nav li .cur_lnk {
+        color: rgb(240,139,0) !important;
+    }
+
+.signOutBtn {
+    color: white;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: small;
+    border-bottom: 1px solid rgba(19,181,234,0.9);
+    border-left: 1px solid rgba(19,181,234,0.9);
+    background-color: rgba(19,181,234,0.5);
+}
+
+    .signOutBtn a {
+        text-decoration: none !important;
+    }
+
+.signOutBtnText {
+    color: white;
+    font-size: small;
+}
+/*_________END Navigation Bar_________*/
+
+
+
+
+
+
+
+/* 7c)_________START Home View_________*/
+.homeIcons {
+    width: 70%;
+    margin: 40px auto 20px auto !important;
+    text-align: center;
+}
+
+    .homeIcons img {
+        margin: 10px;
+    }
+
+.DDTileOrange, .DDTileGreen, .DDTileGrey, .DDTileLBlue, .DDTileRed, .DDTileDBlue, .DDTilePurple, .DDTilePink {
+    height: 200px;
+    width: 200px;
+    color: white;
+    display: inline-block;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-position: 50% 35%;
+    background-size: 80px, cover;
+    vertical-align: middle;
+    position: relative;
+}
+
+.DDTileOrange {
+    background: linear-gradient(rgba(240, 139, 0, 1), #bd6d00);
+}
+
+.DDTileGreen {
+    background: linear-gradient(rgba(84, 185, 72, 1), #439539);
+}
+
+.DDTileGrey {
+    background: linear-gradient(rgba(128, 128, 128, 1), #6c6c6c);
+}
+
+.DDTileLBlue {
+    background: linear-gradient(rgba(19, 181, 234, 1), #0f91bb);
+}
+
+.DDTileRed {
+    background: linear-gradient(rgba(234,72,19,1), #b70f01);
+}
+
+.DDTileDBlue {
+    background: linear-gradient(rgba(28,38,116,1), #12194b);
+}
+
+.DDTilePurple {
+    background: linear-gradient(rgba(117,72,185,1), #5a378f);
+}
+
+.DDTilePink {
+    background: linear-gradient(rgba(215,24,104,1), #a2124e);
+}
+
+.homeIconFA {
+    position: relative;
+    top: 35px;
+    color: #fff;
+}
+
+.DDTileTxt0 {
+    height: 50px;
+    line-height: 50px;
+}
+
+.DDTileTxt1 {
+    position: relative;
+    top: 45px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+/*_________END Home View_________*/
+
+
+
+
+
+
+
+/* 8a)_________START - Table Settings_________*/
+.table, .pagedList, .utilitySearchRow, .filters {
+    margin: 2px auto auto auto;
+}
+
+.tab-pane .table, .tab-pane .pagedList, .tab-pane .utilitySearchRow, .tab-pane .filters {
+    width: 99%;
+}
+
+.table tr {
+    padding: 0.50rem;
+}
+
+.utilitySearchRow {
+    margin-bottom: 0;
+}
+
+.table tbody {
+    border: 1px solid #dee2e6;
+}
+
+.table .thead-light th {
+    background-color: rgb(240,139,0);
+}
+
+.table th {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.table thead th:not(.row-header) {
+    border-left: 1px solid #f5a20a;
+}
+
+.table td {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-left: 1px solid whitesmoke;
+}
+
+    .table td:first-child {
+        border-left: 1px solid #dee2e6;
+    }
+
+    .table td:last-child {
+        border-right: 1px solid #dee2e6;
+    }
+
+.ExportButton, .AuditButton {
+    float: right;
+    margin-left: 20px;
+    color: #000;
+}
+
+.table .thead-light th {
+    border-top: 1px solid #d77c00 !important;
+    border-bottom: 2px solid #d77c00 !important;
+    white-space: nowrap;
+}
+
+    .table .thead-light th:first-child {
+        border-left: 1px solid #d77c00 !important;
+    }
+
+    .table .thead-light th:last-child {
+        border-right: 1px solid #d77c00 !important;
+    }
+
+
+/*_________END Table Settings_________*/
+
+/* 8b)_________START Table Ordering_________ */
+.orderby {
+    padding-right: 12px !important;
+    cursor: pointer;
+}
+
+.ordernone {
+    background: url(images/sort.gif) right 5px center;
+}
+
+.orderasc {
+    background: url(images/sort_asc.gif) right 5px center;
+}
+
+.orderdesc {
+    background: url(images/sort_desc.gif) right 5px center;
+}
+
+.ordernone, .orderasc, .orderdesc {
+    cursor: pointer;
+    background-repeat: no-repeat;
+}
+
+.borderright {
+    border-right: solid 1px white;
+}
+/* _________End Table Ordering_________ */
+
+
+/* 8c)_________START Data Tables_________ */
+
+
+
+
+
+
+
+
+
+
+table.dataTable thead th, table.dataTable thead td {
+    border-bottom: none !important;
+}
+
+table.dataTable.no-footer {
+    border-bottom: 1px solid lightgray !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    background: rgb(19,181,234) !important;
+    color: #fff !important;
+    border: none !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: ghostwhite !important;
+    color: #000 !important;
+    border: none !important;
+}
+
+.paginate_button.next, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover, .dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active {
+    background: none !important;
+}
+
+
+
+
+
+
+/* _________End Data Tables_________ */
+
+/* 9a)_________START - Search layout_________ */
+/*Remove ... from pagedlist control*/
+.PagedList-ellipses {
+    display: none !important;
+}
+
+
+/* _________END - Search layout */
+
+
+
+/* 9b)_________START - Search add-ons_________ */
+/*Spinner style for loading screens*/
+#spinner {
+    display: none;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-image: url("Images/loading.png");
+    background-size: 100px;
+    -webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+    text-align: center;
+    padding: 10px;
+    margin-left: -50px;
+    margin-top: -50px;
+    z-index: 2;
+    overflow: auto;
+}
+
+@-moz-keyframes spin {
+    100% {
+        -moz-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+/* _________END - Search add-ons_________ */
+
+
+
+
+
+
+
+/* 9c)_________START - Search Filters & Search Results_________*/
+/*.filters {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}*/
+
+.multi-line {
+    height: 100px !important;
+    resize: none; /*Turn off chrome multi-line resize control*/
+}
+
+/*.filters .form-group {
+    margin-bottom: 2px !important;
+}*/
+
+/*.tblfilters > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{
+    border-top: 1px solid white;
+}
+*/
+
+/*_________END - Search Filters & Search Results_________*/
+
+/* 10)_________File Upload Start_________*/
+.fileinput-button {
+    position: relative;
+    overflow: hidden;
+}
+
+    .fileinput-button input {
+        position: absolute;
+        margin-bottom: 2px;
+        top: 0;
+        right: 0;
+        margin: 0;
+        opacity: 0;
+        font-size: 20px;
+        direction: ltr;
+        cursor: pointer;
+    }
+
+.file-upload-error td {
+    color: red !important;
+}
+
+.progress {
+    clear: both;
+    height: inherit;
+    padding: 2px 2px 2px 2px;
+    border: 1px solid #e3f2f2;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+    .progress .progresstext {
+        font-size: small;
+        padding-top: 5px;
+    }
+
+    .progress .progressbar,
+    .progress .progresstext {
+        text-align: center;
+    }
+
+    .progress #progress_bar {
+        width: 228px;
+        background-color: transparent;
+        height: 11px;
+    }
+/*_________File Upload End_________*/
+
+
+

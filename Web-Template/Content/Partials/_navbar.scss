@@ -1,0 +1,81 @@
+﻿#header-bar {
+    position: relative;
+    min-height: 75px;
+    background-color: $Lime-Green;
+    border-color: $Lime-Green;
+}
+
+#logo {
+    background-image: url('Images/MachLogo.png');
+    background-repeat: no-repeat;
+    background-size: 120px;
+    float: left;
+    height: 61px;
+    margin: 10px 10px 10px 10px;
+    display: table;
+
+    > h1 {
+        margin: 10px 10px 10px 135px;
+        color: $white;
+        display: table-cell;
+        vertical-align: middle;
+        padding-left: 135px;
+    }
+}
+
+@media (max-width: 762px ) {
+    #logo {
+        background-size: 70px !important;
+        height: 40px;
+
+        > h1 {
+            margin: 0 !important;
+            padding-left: 85px;
+            display: inherit;
+        }
+    }
+}
+
+.navbar-nav {
+    color: $v-light-grey !important;
+
+    .nav-link {
+        color: $white !important;
+    }
+
+    a, a:hover, a:active {
+        text-decoration: none;
+    }
+
+    li .cur_lnk {
+        color: $table-blue !important;
+    }
+}
+
+.nav-item > .active {
+    background-color: $light-grey !important;
+}
+
+.dropdown-menu > li > a {
+    width: 100%;
+}
+
+.signOutBtn {
+    color: $white;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: small;
+    border-bottom: 1px solid rgba($blue,0.9);
+    border-left: 1px solid rgba($blue,0.9);
+    background-color: rgba($blue,0.5);
+
+    a {
+        text-decoration: none !important;
+    }
+}
+
+.signOutBtnText {
+    color: $white;
+    font-size: small;
+}

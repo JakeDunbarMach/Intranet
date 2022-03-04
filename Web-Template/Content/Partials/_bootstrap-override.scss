@@ -1,0 +1,38 @@
+﻿
+.tab-pane {
+    border: 1px solid $light-grey;
+    border-top: 0;
+    padding: 15px;
+
+    .table,
+    .pagedList,
+    .utilitySearchRow,
+    .filters {
+        width: 99%;
+    }
+}
+
+.activeTab {
+    background-color: rgba($table-blue, 0.7) !important;
+}
+
+textarea {
+    min-height: 65px;
+}
+
+.panel {
+    padding: 0;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists will truncate terms that are too long to fit in the left column */
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.caret {
+    color: $white !important;
+}
+
+.col-form-label {
+    font-weight: 700;
+}

@@ -1,0 +1,81 @@
+﻿* {
+    font-size: 15px;
+    font-family: 'Roboto',Tahoma, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: Rockwell, Tahoma, Arial;
+}
+
+.body-content {
+    padding: 15px;
+}
+
+.clear {
+    clear: both;
+}
+
+a {
+    &:link, &:hover {
+        color: $black;
+        text-decoration: none;
+    }
+
+    &:visited, &:active {
+        color: $black;
+    }
+}
+
+.TextOrangeMach {
+    color: $orange !important;
+}
+
+.BGOrangeMach {
+    background-color: $orange !important;
+}
+
+.TextLBlueMach {
+    color: $blue !important;
+}
+
+.BGLBlueMach {
+    background-color: $blue !important;
+}
+
+.TextDBlueMach {
+    color: $dark-blue !important;
+}
+
+.BGDBlue2Mach {
+    background-color: $dark-blue !important;
+}
+
+.TextGreenMach {
+    color: $green !important;
+}
+
+.BGGreenMach {
+    background-color: $green !important;
+}
+
+.TextGreyMach {
+    color: $grey !important;
+}
+
+.BGGreyMach {
+    background-color: $grey !important;
+}
+
+.TextRedMach {
+    color: $red !important;
+}
+
+.BGRedMach {
+    background-color: $red !important;
+}
+
+.TextBlackMach {
+    color: $black !important;
+}

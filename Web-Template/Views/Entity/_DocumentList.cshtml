@@ -1,0 +1,61 @@
+﻿@model List<AppModel.EntityDocument>
+
+@if (Model != null && Model.Count > 0)
+{
+
+    <table id="tblDocuments" class="table table-hover table-responsive">
+        <thead class="thead-light">
+            <tr>
+                @if (@ViewBag.PermissionID == 3)
+                {
+                    <th></th>
+                }
+                <th>
+                    Document
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (int i = 0; i < Model.Count; ++i)
+            {
+                <tr>
+                    @if (@ViewBag.PermissionID == 3)
+                    {
+                        <td>
+                            <a class="lnkDocumentDelete" href="~/?id=@Model[i].EntityDocumentID" title="Delete">
+                                <span class="fa fa-times TextOrange2SFG"></span>
+                            </a>
+                        </td>
+
+                    }
+                    <td class="doc">
+                        <a href="@Model[i].DocumentPath@ViewBag.ED_SAS" target="_blank" class="lnkDocumentView">
+                            @Html.DisplayFor(model => model[i].DocumentName)
+                        </a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+}
+else
+{
+    <div class="NoRecordCount">There's no documents for this Entity</div>
+}
+
+@if (@ViewBag.PermissionID == 2 || @ViewBag.PermissionID == 3)
+{
+    <div id="AddDocumentSection">
+        <span class="fa fa-plus"></span>
+        <input type="button" id="btnAddDocument" class="btnAdd" name="btnAddDocument" value="Add new document" />
+    </div>
+}
+@using (Html.BeginForm("DeleteDocument", "EntityDocument", FormMethod.Post, new { name = "frmDeleteDocument", id = "frmDeleteDocument" }))
+{
+    @Html.AntiForgeryToken()
+}
+
+<script src="~/Scripts/Entity/DocumentList.js?id=@ViewBag.JavaScriptVersion"></script>

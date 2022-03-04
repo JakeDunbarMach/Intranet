@@ -1,0 +1,161 @@
+﻿.disabled {
+    background-color: $v-light-grey;
+}
+
+.form-control:not([class*=" form-control-"]) {
+    height: 2.4rem;
+}
+
+.btnfilters {
+    margin-top: 35px;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.btnAdd {
+    max-width: 300px;
+    padding: 5px 2px 15px 2px;
+    background: none !important;
+    border: none;
+    padding: 5px 0 !important;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    width: 165px;
+    height: 40px;
+    text-align: center;
+    background: $green;
+    transition: all 0.2s ease;
+    border-radius: 25px;
+
+    span {
+        position: relative;
+        width: 20px;
+        height: 4px;
+        top: 50%;
+        left: 50%;
+        margin: -2px 0px 0px -4px;
+        background: $white;
+        display: block;
+        transform: rotate(-45deg);
+        transition: all 0.2s ease;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 4px;
+            height: 12px;
+            margin-top: -8px;
+            background: $white;
+            transition: all 0.2s ease;
+        }
+    }
+}
+
+.toggle-radio {
+    display: inline-block;
+    float: right;
+
+    input[type=radio] {
+        display: none;
+    }
+}
+
+/* For use with UIhint YesNoBoolActive */
+.IsActiveTemplate label {
+    cursor: pointer;
+    color: $light-grey;
+    width: 60px;
+    line-height: 40px;
+    transition: all 0.2s ease;
+}
+
+.IsActiveTemplate label[for=IsActiveYes] {
+    position: absolute;
+    left: 3px;
+    height: 20px;
+}
+
+.IsActiveTemplate label[for=IsActiveNo] {
+    position: absolute;
+    right: 3px;
+}
+
+.IsActiveTemplate #IsActiveYes:checked ~ .switch label[for=IsActiveYes] {
+    color: $white;
+}
+
+.IsActiveTemplate #IsActiveNo:checked ~ .switch {
+    background: $red;
+
+    span {
+        background: $white;
+        margin-left: -8px;
+
+        &:after {
+            background: $white;
+            height: 20px;
+            margin-top: -8px;
+            margin-left: 8px;
+        }
+    }
+
+    label[for=IsActiveNo] {
+        color: $white;
+    }
+}
+
+.btn-primary {
+    background-color: $blue;
+    border-color: $blue;
+
+    &:hover {
+        background-color: $blue-d;
+        border-color: $blue-d;
+    }
+}
+
+.btn-link {
+    padding: 0;
+}
+
+input[type='checkbox'] {
+    text-align: left !important;
+}
+
+.field-validation-error {
+    p, span {
+        color: $red !important;
+    }
+}
+
+.form-group.required .col-form-label:after {
+    content: "*" !important;
+    padding-left: 5px;
+    color: $red;
+}
+
+.ValidationError, #ValidationError {
+    margin: 10px;
+    color: $red !important;
+}
+
+.checkBoxField {
+    -webkit-column-count: 3; /* Chrome, Safari, Opera */
+    -moz-column-count: 3; /* Firefox */
+    column-count: 3;
+    width: 100%;
+}
+
+.checkBoxItem {
+    display: inline-block;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.userListbox {
+    height: auto !important;
+}

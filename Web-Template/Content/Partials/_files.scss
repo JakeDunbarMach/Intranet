@@ -1,0 +1,50 @@
+﻿#file {
+    width: 100% !important;
+}
+
+.fileinput-button {
+    position: relative;
+    overflow: hidden;
+
+    input {
+        position: absolute;
+        margin-bottom: 2px;
+        top: 0;
+        right: 0;
+        margin: 0;
+        opacity: 0;
+        font-size: 20px;
+        direction: ltr;
+        cursor: pointer;
+    }
+}
+
+.file-upload-error td {
+    color: $red !important;
+}
+
+.progress {
+    clear: both;
+    height: inherit;
+    padding: 2px 2px 2px 2px;
+    border: 1px solid $light-turquoise;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+
+    .progresstext {
+        font-size: small;
+        padding-top: 5px;
+    }
+
+    .progressbar,
+    .progresstext {
+        text-align: center;
+    }
+
+    #progress_bar {
+        width: 228px;
+        background-color: transparent;
+        height: 11px;
+    }
+}

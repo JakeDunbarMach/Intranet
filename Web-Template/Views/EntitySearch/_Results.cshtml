@@ -1,0 +1,75 @@
+﻿@model WebUI.ViewModels.EntitySearchViewModel
+
+<div id="entityResults">
+    <div class="utilitySearchRow">
+        @if (ViewBag.PermissionID == 2 || ViewBag.PermissionID == 3)
+        {
+            <span class="fa fa-plus"></span>
+            <input type="button" class="btnAdd btnAddEntity" value="Add new entity" />
+        }
+        @if (Model.SearchResults != null && Model.SearchResults.Count > 0)
+        {
+            <button class="btn btn-link ExportButton" name="Export" type="submit">Export <span class='fa fa-download'></span></button>
+        }
+    </div>
+    @{ if (Model.SearchResults != null && Model.SearchResults.Count > 0)
+        {
+
+            <table id="tblResults" class="table table-hover">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col" class="row-icon">
+                        </th>
+                        <th scope="col" class="row-icon">
+                            Entity Ref
+                        </th>
+                        <th scope="col">
+                            Entity Date
+                        </th>
+                        <th scope="col">
+                            Entity Type
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.SearchResults)
+                    {
+                        <tr>
+                            <td class="row-icon">
+                                @Html.ActionLink(" ", "Load", "Entity", new { @id = item.EntityID }, new { @class = "lnkEntityEdit listtablelink fa fa-edit", @title = "Edit" })
+                                @*@Html.ActionLink(" ", "Load", "Entity", new { @id = item.EntityID }, new { @class = "lnkEntityEdit listtablelink fa fa-edit TextOrange2SFG", @title = "Edit" })
+                                    @if (@ViewBag.PermissionID == 3)
+                                    {
+                                        <a class="lnkEntityDelete listtablelink fa fa-times TextOrange2SFG" href="~/?ID=@item.EntityID" title="Delete"></a>
+
+                                    }*@
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EntityRef)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EntityDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.EntityTypeName)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+        else
+        {
+            <span> No entities found</span>
+        }
+    }
+    <div class="pagedList">
+        @Html.PagedListPager((IPagedList)Model.SearchResults, page => Url.Action("Search", new { page }))
+    </div>
+
+
+</div>
+
+
+<script type="text/javascript" src="~/Scripts/EntitySearch/EntitySearchResults.js?id=@ViewBag.JavaScriptVersion"></script>
+
